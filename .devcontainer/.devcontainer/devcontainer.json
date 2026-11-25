@@ -1,0 +1,15 @@
+{
+  "name": "C# Razor Pages y SQL Server",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit","ms-mssql.mssql"
+      ]
+    }
+  },
+  "forwardPorts": ,
+  "postCreateCommand": "dotnet tool install --global dotnet-ef"
+}
