@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    image: ://microsoft.com
+    volumes:
+      - ../..:/workspaces:cached
+      command: sleep infinity
+      network_mode: service:db
+
+  db:
+    image: ://microsoft.com
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Sagh1010$"
+    ports:
+      - "1433:1433"
